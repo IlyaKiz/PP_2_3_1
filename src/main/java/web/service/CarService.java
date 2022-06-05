@@ -17,11 +17,5 @@ public class CarService implements Service {
         listCars.add(new Car("MAZDA", 6, "blue"));
         return listCars;
     }
-    public ArrayList<Car> listCountCars(Integer count) {
-        if (count < 5 & count != null) {
-            return new ArrayList<>(listCars().subList(0, count));
-        } else {
-            return new ArrayList<>(listCars());
-        }
-    }
+
 }
