@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello my cars!</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>email<th>
+    </tr>
+    <th:block th:each="user : ${listUsers}">
+        <tr>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.email}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

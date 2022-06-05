@@ -10,11 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3684bf5-827f-49a4-8a7f-0918f98398bf" name="Changes" comment="05.06.2022">
+      <change afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/models/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/models/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/models/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/models/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/models/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/models/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/controller/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/controller/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/CarController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="AnnotationType" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -102,7 +102,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.MyFirstServer">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="web.controller.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="web.controller.Main" />
       <module name="spring-mvc" />
       <extension name="coverage">
@@ -116,6 +116,7 @@
       </method>
     </configuration>
     <configuration name="MyFirstServer" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.63" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/users" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="spring-mvc:war exploded">
@@ -279,9 +280,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.web.controller.Main" />
+      <item itemvalue="Tomcat Server.MyFirstServer" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.web.controller.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +305,7 @@
       <workItem from="1653490716608" duration="45258000" />
       <workItem from="1653997882507" duration="7124000" />
       <workItem from="1654098456578" duration="1243000" />
-      <workItem from="1654282591059" duration="13767000" />
+      <workItem from="1654282591059" duration="16955000" />
     </task>
     <task id="LOCAL-00001" summary="26.05.2022">
       <created>1653586919520</created>
@@ -323,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654435365051</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="05.06.2022">
+      <created>1654437142006</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654437142006</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
