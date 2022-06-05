@@ -1,12 +1,19 @@
 package web.models;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.*;
 
-
+@Entity
+@Table(name = "cars")
 public class Car {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column
     private String model;
 
+    @Column
     private int series;
 
     public String getModel() {
@@ -33,6 +40,7 @@ public class Car {
         this.color = color;
     }
 
+    @Column
     private String color;
 
     public Car() {
