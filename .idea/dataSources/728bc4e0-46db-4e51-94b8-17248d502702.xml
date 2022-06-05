@@ -1082,56 +1082,29 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="283" parent="274" name="cars">
+    <table id="283" parent="274" name="users">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="284" parent="274" name="users">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <column id="285" parent="283" name="id">
+    <column id="284" parent="283" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="286" parent="283" name="color">
+    <column id="285" parent="283" name="email">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="287" parent="283" name="model">
+    <column id="286" parent="283" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="288" parent="283" name="series">
-      <DataType>int|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <key id="289" parent="283" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-    </key>
-    <column id="290" parent="284" name="id">
-      <AutoIncrement>1</AutoIncrement>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="291" parent="284" name="email">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="292" parent="284" name="name">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="293" parent="284" name="last_name">
+    <column id="287" parent="283" name="last_name">
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <key id="294" parent="284" name="PRIMARY">
+    <key id="288" parent="283" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
