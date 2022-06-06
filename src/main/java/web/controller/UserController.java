@@ -18,10 +18,6 @@ import java.util.List;
 @Controller
 public class UserController {
 
-
-
-
-
     private UserService userService;
 
     @Autowired
@@ -29,27 +25,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    public void listUsers() {
-        userService.addUser(new User("User1", "Lastname1", "user1@mail.ru"));
-        userService.addUser(new User("User2", "Lastname2", "user2@mail.ru"));
-        userService.addUser(new User("User3", "Lastname3", "user3@mail.ru"));
-        userService.addUser(new User("User4", "Lastname4", "user4@mail.ru"));
-    }
-
-
-
     @GetMapping(value = "/index")
     public String index(Model model) {
-        List<User> users = userService.getAllUsers();
 
+        List<User> users = userService.getAllUsers();
         model.addAttribute("users", users);
         return "index";
-    }
-
-    @GetMapping("index/{id}")
-    public String show(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("user", userService.getUserById(id));
-        return "show";
     }
 
     @GetMapping("/new")
@@ -61,7 +42,7 @@ public class UserController {
     @PostMapping()
     public String createUser(@ModelAttribute("user") User user) {
         userService.addUser(user);
-        return "redirect:/";
+        return "redirect:/index";
     }
 
     @GetMapping("index/{id}/edit")
@@ -73,7 +54,7 @@ public class UserController {
     @PostMapping("/{id}")
     public String update(@ModelAttribute("user") User user) {
         userService.updateUser(user);
-        return "redirect:/";
+        return "redirect:/index";
     }
 
     @GetMapping("/delete/{id}")

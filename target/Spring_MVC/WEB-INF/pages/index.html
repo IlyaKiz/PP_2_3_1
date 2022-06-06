@@ -21,7 +21,7 @@
         <td th:utext="${user.lastName}">Last Name</td>
         <td th:utext="${user.email}">email</td>
         <td>
-            <a th:href="@{/index/{id}/edit(id=${user.id})}">Edit</a>
+            <a th:href="@{index/{id}/edit(id=${user.id})}">Edit</a>
         </td>
         <td>
             <a th:href="@{/delete/{id}(id=${user.id})}">Delete</a>
@@ -29,7 +29,7 @@
     </tr>
 </table>
 <br>
-<a href="/new">add New User</a>
+<a href="/new">Add User</a>
 
 </body>
 </html>

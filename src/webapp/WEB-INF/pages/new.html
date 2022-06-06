@@ -6,21 +6,21 @@
 </head>
 <body>
 
-<form th:method="post" th:action="@{/users}" th:object="${user}">
+<form th:method="post" th:action="@{/}" th:object="${user}">
 
-    <label for="name">Enter your firstName</label>
-    <input type="text" th:field="${firstName}" id="name"/>
+    <label for="firstName">Enter firstName</label>
+    <input type="text" th:field="${user.firstName}" id="firstName"/>
     <br/>
 
-    <label for="lastName">Enter your lastname</label>
-    <input type="text" th:field="${lastName}" id="lastName"/>
+    <label for="lastName">Enter lastname</label>
+    <input type="text" th:field="${user.lastName}" id="lastName"/>
     <br/>
 
-    <label for="age">Enter your email</label>
-    <input type="text" th:field="${email}" id="age"/>
+    <label for="email">Enter email</label>
+    <input type="text" th:field="${user.email}" id="email"/>
     <br/>
 
-    <input type="submit" value="Save."/>
+    <input type="submit" value="save"/>
 </form>
 
 </body>
