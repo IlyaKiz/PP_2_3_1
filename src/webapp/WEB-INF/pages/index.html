@@ -5,7 +5,7 @@
     <title>home page</title>
 </head>
 <body>
-<h1>List of Users</h1>
+<h3>List of Users</h3>
 
 <table border="2">
     <tr>
@@ -13,24 +13,23 @@
         <th>Name</th>
         <th>Last Name</th>
         <th>Email</th>
-        <th>Edit</th>
-        <th>Delete</th>
+
     </tr>
     <tr th:each="user: ${users}">
-        <td th:utext="${user.getId()}">Id</td>
+        <td th:utext="${user.id}">Id</td>
         <td th:utext="${user.firstName}">Name</td>
         <td th:utext="${user.lastName}">Last Name</td>
-        <td th:utext="${user.email}">Age</td>
+        <td th:utext="${user.email}">email</td>
         <td>
-            <a th:href="@{/users/{id}/edit(id=${user.getId()})}">Edit</a>
+            <a th:href="@{/index/{id}/edit(id=${user.id})}">Edit</a>
         </td>
         <td>
-            <a th:href="@{/users/{id}(id=${user.getId()})}">Delete</a>
+            <a th:href="@{/delete/{id}(id=${user.id})}">Delete</a>
         </td>
     </tr>
 </table>
 <br>
-<a href="/users/new">add New User</a>
+<a href="/new">add New User</a>
 
 </body>
 </html>

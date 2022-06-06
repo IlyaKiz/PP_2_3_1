@@ -3,7 +3,6 @@ package web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -19,7 +18,7 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    List<User> listUsers = new ArrayList<>();
+
 
 
 
@@ -30,23 +29,24 @@ public class UserController {
         this.userService = userService;
     }
 
-    public List<User> listUsers() {
+    public void listUsers() {
         userService.addUser(new User("User1", "Lastname1", "user1@mail.ru"));
         userService.addUser(new User("User2", "Lastname2", "user2@mail.ru"));
         userService.addUser(new User("User3", "Lastname3", "user3@mail.ru"));
         userService.addUser(new User("User4", "Lastname4", "user4@mail.ru"));
-        return listUsers;
     }
+
 
 
     @GetMapping(value = "/index")
     public String index(Model model) {
         List<User> users = userService.getAllUsers();
+
         model.addAttribute("users", users);
         return "index";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("index/{id}")
     public String show(@PathVariable("id") Long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
         return "show";
@@ -64,7 +64,7 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping("/{id}/edit")
+    @GetMapping("index/{id}/edit")
     public String showEditForm(Model model, @PathVariable("id") Long id) {
         model.addAttribute("user", userService.getUserById(id));
         return "edit";
@@ -76,10 +76,10 @@ public class UserController {
         return "redirect:/";
     }
 
-    @PostMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") Long id) {
         userService.deleteUser(id);
-        return "redirect:/";
+        return "redirect:/index";
     }
 
 }
