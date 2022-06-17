@@ -1,13 +1,8 @@
 package web.dao;
 
-
-import org.hibernate.SessionFactory;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import web.models.User;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -16,8 +11,6 @@ import java.util.List;
 @Repository
 @Transactional
 public class UserDaoImp implements UserDao {
-
-
 
    @PersistenceContext
    private EntityManager entityManager;
@@ -49,7 +42,5 @@ public class UserDaoImp implements UserDao {
    public User getUserById(Long id) {
       return entityManager.find(User.class, id);
    }
-
-
 
 }
