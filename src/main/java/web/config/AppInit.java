@@ -30,15 +30,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         return new String[]{"/"};
     }
 
-//    @Override
-//    public void onStartup(ServletContext aServletContext)
-//    {
-//        registerHiddenFieldFilter(aServletContext);
-//    }
-//
-//    private void registerHiddenFieldFilter(ServletContext aContext) {
-//        aContext.addFilter("hiddenHttpMethodFilter", new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null ,true, "/*");
-//    }
+
 
     @Override
     protected Filter[] getServletFilters() {
