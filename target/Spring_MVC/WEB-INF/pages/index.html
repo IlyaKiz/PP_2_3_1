@@ -21,15 +21,20 @@
         <td th:utext="${user.lastName}">Last Name</td>
         <td th:utext="${user.email}">email</td>
         <td>
-            <a th:href="@{index/{id}/edit(id=${user.id})}">Edit</a>
+            <form th:object="${user}" th:action="@{/edit/{id}(id=${user.id})}" th:method="get">
+                <input type="submit" name="_method" value="edit" />
+            </form>
+
         </td>
         <td>
-            <a th:href="@{/delete/{id}(id=${user.id})}">Delete</a>
+            <form th:object="${user}" th:action="@{/delete/{id}(id=${user.id})}" th:method="delete">
+                <input type="submit" name="_method" value="delete" />
+                </form>
         </td>
     </tr>
 </table>
 <br>
-<a href="/new">Add User</a>
+<a href="/new">add New User</a>
 
 </body>
 </html>
